@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap");
+
+/* global assigns */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* global variables */
+:root {
+  --font: "Baloo 2", cursive;
+  --accentColor: rgba(138, 43, 226, 1);
+  /* --accentColor: #8a2be2; */
+  --prTextColor: #fff;
+  --prTextSize: 1.25em;
+  --allBgColor: #131921;
+}
+
+/* body styles */
+body {
+  background-color: var(--allBgColor);
+  color: white;
+}
+
+/* navbar for wide screens */
+.navbar-pc {
+  /* border: 2px solid black; */
+  height: 3rem;
+  background-color: var(--accentColor);
+  /* background-color: #1e90ff; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo-img {
+  width: 4rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--prTextSize);
+  font-family: var(--font);
+}
+
+.nav-links > li {
+  margin: 0 1em;
+  list-style: none;
+}
+
+.nav-links > li > a {
+  color: var(--prTextColor);
+  text-decoration: none;
+}
+
+.fa-brands {
+  color: var(--prTextColor);
+  margin: 0 0.25em;
+  cursor: pointer;
+}
+
+/* phone navbar style */
+.navbar-phone {
+  display: none;
+  flex-direction: column;
+  padding: 0 1em;
+  height: 3rem;
+  justify-content: space-between;
+  background-color: var(--accentColor);
+  /* height: 10rem; */
+  color: var(--prTextColor);
+  transition: all 200ms ease-in-out;
+}
+.navbar-phone-height {
+  height: 12.75em;
+  border-radius: 0 0 25px 25px;
+}
+
+.alw-vis-navPhn-items {
+  /* always visible nav phone items*/
+  margin: 0 1em;
+  width: 95%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburger {
+  margin: 2px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.hamburger:active {
+  border-radius: 4px;
+  border: 1px solid var(--prTextColor);
+}
+
+.ham-bar {
+  background-color: var(--prTextColor);
+  width: 1.5em;
+  height: 5px;
+  margin: 4px 0;
+  border-radius: 4px;
+  transition: 400ms;
+}
+
+.nav-phone-links {
+  display: none;
+  border-top: 2px solid white;
+  text-align: center;
+  padding: 1em 0;
+}
+.nav-phone-links-visible {
+  display: block;
+  transition: all 200ms ease-in-out;
+}
+
+.nav-phone-links-list > li {
+  list-style: none;
+}
+.nav-phone-links-list > li > a {
+  text-decoration: none;
+  color: white;
+  font-family: var(--font);
+  font-size: var(--prTextSize);
+}
+
+.sm-handles-phone {
+  padding: 0.5em 0;
+}
+
+/* media queries for navbar */
+@media screen and (max-width: 700px) {
+  .navbar-pc {
+    display: none;
+  }
+  .navbar-phone {
+    display: flex;
+  }
+}
+
+/* main landing page styling */
+.landing-page {
+  height: 100vh;
+  /* background: url("../imgs/landing_page.jpg") top center no-repeat; */
+  background: url("../imgs/landing_page_bg.jpg") top center no-repeat;
+  background-color: #131921;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.intro-material {
+  /* border: 2px solid white; */
+  height: 75vh;
+  width: 50vw;
+}
+
+.text-box {
+  /* border: 2px solid white; */
+  color: var(--prTextColor);
+  padding: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.text-content {
+  /* border: 2px solid white; */
+  font-family: var(--font);
+  padding: 1em;
+}
+.text-content > h1 {
+  font-size: 5vw;
+  /* text-shadow: 2px 2px 8px var(--accentColor); */
+}
+.text-content > p {
+  font-size: 2.5vw;
+}
+.special-text {
+  text-shadow: 2px 2px 8px var(--accentColor);
+}
+
+.img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-img {
+  width: 25vw;
+}
+
+@media screen and (max-width: 1000px) {
+  .landing-page {
+    flex-direction: column-reverse;
+    height: 100vh;
+    align-items: center;
+  }
+  .text-box {
+    justify-content: center;
+  }
+  .text-content {
+    text-align: center;
+    width: 80vw;
+    height: auto;
+    padding: 0;
+  }
+  .text-content > h1 {
+    font-size: 6vmax;
+  }
+  .text-content > p {
+    font-size: 2.5vmax;
+  }
+  .intro-img {
+    width: 35vmax;
+  }
+  .intro-material {
+    width: 80vmax;
+  }
+  .text-box {
+    align-items: flex-start;
+  }
+  .bar1 {
+    transform: translate(0, 6px) rotate(-45deg);
+  }
+  .bar2 {
+    opacity: 0;
+  }
+  .bar3 {
+    transform: translate(0, -12px) rotate(45deg);
+  }
+}
+
+/* resume page styling */
+
+.resume-page {
+  font-family: var(--font);
+  height: 100vh;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* showCase page styling */
+.showCase-page {
+  font-family: var(--font);
+  height: 100vh;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

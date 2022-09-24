@@ -150,7 +150,7 @@ body {
 .landing-page {
   height: 100vh;
   /* background: url("../imgs/landing_page.jpg") top center no-repeat; */
-  background: url("../imgs/landing_page_bg.jpg") top center no-repeat;
+  background: url("./imgs/landing_page_bg.jpg") top center no-repeat;
   background-color: #131921;
   display: flex;
   align-items: flex-start;
